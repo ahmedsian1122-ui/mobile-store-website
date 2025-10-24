@@ -1,1 +1,287 @@
-/* common CSS file */ body{font-family:Arial;background:#f8f9fa;margin:0;padding:0;} h1{color:#333;text-align:center;margin-top:50px;}
+/* =========================================================
+   Global Styles - Used Across All Pages
+   ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+nav {
+  background: #222;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  display: inline-block;
+  transition: background 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  background: #007bff;
+  border-radius: 4px;
+}
+
+main {
+  padding: 2rem;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   Home Page (Issue #1)
+   ========================================================= */
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #007bff, #00bcd4);
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.feature h3 {
+  margin-bottom: 0.5rem;
+  color: #007bff;
+}
+
+/* =========================================================
+   Promotions Page (Issue #1)
+   ========================================================= */
+
+.promotions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.promo-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.promo-card h3 {
+  color: #007bff;
+}
+
+.promo-card p {
+  margin: 0.5rem 0;
+}
+
+/* =========================================================
+   Products Page (Issue #2)
+   ========================================================= */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.product {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.product h3 a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.product h3 a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   Product Details Page (Issue #2)
+   ========================================================= */
+
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.product-details img {
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.product-details .details {
+  max-width: 400px;
+}
+
+.product-details ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.product-details li {
+  margin: 0.3rem 0;
+}
+
+.product-details button {
+  margin-top: 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.product-details button:hover {
+  background: #0056b3;
+}
+
+/* =========================================================
+   Contact Page (Issue #3)
+   ========================================================= */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 0.5rem;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* =========================================================
+   Responsive Adjustments
+   ========================================================= */
+
+@media (max-width: 768px) {
+  nav a {
+    padding: 0.6rem 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .product-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-details img {
+    max-width: 80%;
+  }
+}
